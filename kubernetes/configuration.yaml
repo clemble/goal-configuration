@@ -1,0 +1,25 @@
+kind: ReplicationController
+id: configuration-controller
+apiVersion: v1beta1
+desiredState:
+  replicas: 1
+  replicaSelector:
+    name: configuration
+    version: v1
+  podTemplate:
+    labels:
+      name : configuration
+      version: v1
+    desiredState:
+      manifest:
+        containers:
+          - name: configuration
+            image: clemble/configuration:latest
+            imagePullPolicy : PullAlways
+            ports:
+              - containerPort: 10004
+                hostPort: 10004
+                protocol: TCP
+            labels:
+              name : configuration
+              version: v1

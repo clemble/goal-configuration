@@ -1,0 +1,11 @@
+id: configuration
+kind: Service
+apiVersion: v1beta1
+selector:
+  name: configuration
+containerPort: 10004
+protocol: TCP
+port: 80
+publicIPs:
+  - "192.158.31.228"
+createExternalLoadBalancer: true

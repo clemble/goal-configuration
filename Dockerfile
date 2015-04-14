@@ -3,6 +3,6 @@ MAINTAINER antono@clemble.com
 
 EXPOSE 10004
 
-ADD target/goal-configuration-0.17.0-SNAPSHOT.jar /data/goal-configuration.jar
+ADD target/goal-configuration-*-SNAPSHOT.jar /data/goal-configuration.jar
 
 CMD java -jar -Dspring.profiles.active=cloud -Dserver.port=10004 /data/goal-configuration.jar

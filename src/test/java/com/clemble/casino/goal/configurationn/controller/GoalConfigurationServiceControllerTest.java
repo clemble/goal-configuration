@@ -39,9 +39,9 @@ public class GoalConfigurationServiceControllerTest {
     @Test
     public void testChoiceRead() throws IOException {
         ObjectMapper objectMapper = ObjectMapperUtils.OBJECT_MAPPER;
-        String choiceSerialized = objectMapper.writeValueAsString(configurationServiceController.getChoises());
+        String choiceSerialized = objectMapper.writeValueAsString(configurationServiceController.getChoices());
         GoalConfigurationChoices readChoices =  objectMapper.readValue(choiceSerialized, GoalConfigurationChoices.class);
-        Assert.assertEquals(readChoices, configurationServiceController.getChoises());
+        Assert.assertEquals(readChoices, configurationServiceController.getChoices());
 
     }
 

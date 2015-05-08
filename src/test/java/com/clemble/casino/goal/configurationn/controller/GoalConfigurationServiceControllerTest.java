@@ -1,7 +1,7 @@
 package com.clemble.casino.goal.configurationn.controller;
 
 import com.clemble.casino.goal.lifecycle.configuration.GoalConfiguration;
-import com.clemble.casino.goal.configuration.controller.GoalConfigurationServiceController;
+import com.clemble.casino.goal.configuration.controller.GoalConfigurationController;
 import com.clemble.casino.goal.configuration.spring.GoalConfigurationSpringConfiguration;
 import com.clemble.casino.goal.lifecycle.configuration.GoalConfigurationChoices;
 import com.clemble.casino.goal.lifecycle.configuration.IntervalGoalConfigurationBuilder;
@@ -26,7 +26,7 @@ import java.util.Collection;
 public class GoalConfigurationServiceControllerTest {
 
     @Autowired
-    public GoalConfigurationServiceController configurationServiceController;
+    public GoalConfigurationController configurationServiceController;
 
     @Test
     public void testConfigurationsRead() throws IOException {

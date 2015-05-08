@@ -17,17 +17,17 @@ import static com.clemble.casino.WebMapping.PRODUCES;
  * Created by mavarazy on 9/1/14.
  */
 @RestController
-public class GoalConfigurationServiceController implements GoalConfigurationService {
+public class GoalConfigurationController implements GoalConfigurationService {
 
     // TODO replace with SMART configurations
     final private List<GoalConfiguration> configurations;
     final private GoalConfigurationChoices choises;
     final private IntervalGoalConfigurationBuilder intervalBuilder;
 
-    public GoalConfigurationServiceController(
-        List<GoalConfiguration> configurations,
-        GoalConfigurationChoices choises,
-        IntervalGoalConfigurationBuilder intervalBuilder
+    public GoalConfigurationController(
+            List<GoalConfiguration> configurations,
+            GoalConfigurationChoices choises,
+            IntervalGoalConfigurationBuilder intervalBuilder
     ) {
         this.configurations = configurations;
         this.choises = choises;

@@ -1,7 +1,7 @@
 package com.clemble.casino.goal.configuration.spring;
 
 import com.clemble.casino.bet.Bet;
-import com.clemble.casino.goal.configuration.controller.GoalConfigurationServiceController;
+import com.clemble.casino.goal.configuration.controller.GoalConfigurationController;
 import com.clemble.casino.goal.lifecycle.configuration.GoalConfiguration;
 import com.clemble.casino.goal.lifecycle.configuration.GoalConfigurationChoices;
 import com.clemble.casino.goal.lifecycle.configuration.GoalRoleConfiguration;
@@ -106,8 +106,8 @@ public class GoalConfigurationSpringConfiguration implements SpringConfiguration
         );
 
         @Bean
-        public GoalConfigurationServiceController goalConfigurationServiceController() {
-            return new GoalConfigurationServiceController(CLOUD_CONFIGURATIONS, CLOUD_CHOICES, CLOUD_INTERVAL_BUILDER);
+        public GoalConfigurationController goalConfigurationServiceController() {
+            return new GoalConfigurationController(CLOUD_CONFIGURATIONS, CLOUD_CHOICES, CLOUD_INTERVAL_BUILDER);
         }
 
     }
@@ -177,8 +177,8 @@ public class GoalConfigurationSpringConfiguration implements SpringConfiguration
         );
 
         @Bean
-        public GoalConfigurationServiceController goalConfigurationServiceController() {
-            return new GoalConfigurationServiceController(DEFAULT_CONFIGURATIONS, DEFAULT_CHOICES, DEFAULT_INTERVAL_BUILDER);
+        public GoalConfigurationController goalConfigurationServiceController() {
+            return new GoalConfigurationController(DEFAULT_CONFIGURATIONS, DEFAULT_CHOICES, DEFAULT_INTERVAL_BUILDER);
         }
     }
 

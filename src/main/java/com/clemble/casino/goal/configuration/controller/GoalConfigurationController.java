@@ -2,7 +2,7 @@ package com.clemble.casino.goal.configuration.controller;
 
 import com.clemble.casino.goal.lifecycle.configuration.*;
 import com.clemble.casino.goal.lifecycle.configuration.service.GoalConfigurationService;
-import com.clemble.casino.server.ExternalController;
+import com.clemble.casino.server.ServerController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +18,7 @@ import static com.clemble.casino.WebMapping.PRODUCES;
  * Created by mavarazy on 9/1/14.
  */
 @RestController
-public class GoalConfigurationController implements GoalConfigurationService, ExternalController {
+public class GoalConfigurationController implements GoalConfigurationService, ServerController {
 
     // TODO replace with SMART configurations
     final private List<GoalConfiguration> configurations;
